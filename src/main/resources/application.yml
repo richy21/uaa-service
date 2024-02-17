@@ -1,0 +1,20 @@
+#server port
+server:
+  port: 8887
+#application name
+spring:
+  application:
+    name: UAA-SERVICE
+#pour la recuperation de sa config
+  cloud:
+    config:
+      uri: http://localhost:8888
+#it is a eureka client
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
